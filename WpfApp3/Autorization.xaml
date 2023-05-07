@@ -6,10 +6,20 @@
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d" Height="575" Width="800" MaxHeight="575" MinHeight="575" MaxWidth="800" MinWidth="800"
         WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
         >
     <Grid>
-        <Image Source="D:\Wpf-Ежедневник\WpfApp3\bin\Debug\bg.png" Margin="0,0,0,0" HorizontalAlignment="Left" Width="845" Height="575" VerticalAlignment="Top"></Image>
+        <!-- ШАПКА ОКНА -->
+        <Button Height="30" Margin="759,0,2,545" Canvas.ZIndex="1" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="button_exit">
+            <Image x:Name="exit" Source="/res/off.png"/>
+        </Button>
 
-
+        <!-- ФОРМА ВХОДА -->
+        <Image Source="res/bg.png" HorizontalAlignment="Center" Width="800" Height="575" VerticalAlignment="Center"></Image>
+        <TextBox x:Name="inputlogin" Margin="440,159,100,379" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="26" BorderThickness="0,0,0,1"/>
+        <PasswordBox x:Name="inputpassword" Margin="440,219,100,324" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="20" PasswordChar="*" BorderThickness="0,0,0,1" ClipToBounds="True"/>
+        <Button Content="Done" HorizontalAlignment="Left" Margin="530,295,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="{x:Null}" BorderBrush="Black" FontFamily="./res/#Arizonia" FontSize="26" BorderThickness="0,0,0,1" Click="button_done"/>
+        <Button Content="Registration" HorizontalAlignment="Left" Margin="431,251,0,0" VerticalAlignment="Top" Height="25" Width="80" Background="{x:Null}" BorderBrush="Black" FontFamily="./res/#Arizonia" FontSize="16" BorderThickness="0,0,0,1"/>
     </Grid>
 </Window>
