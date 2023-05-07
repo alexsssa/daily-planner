@@ -43,5 +43,10 @@ namespace WpfApp3
         {
             this.Close();
         }
+
+        private void button_register(object sender, RoutedEventArgs e)
+        {
+            new Registration().ShowDialog();
+        }
     }
 }
