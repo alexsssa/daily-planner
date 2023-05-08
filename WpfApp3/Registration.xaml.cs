@@ -26,7 +26,34 @@ namespace WpfApp3
 
         private void button_ok(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (inputlogin.Text.Length > 0)
+            {
+                if (inputpassword.Password.Length > 0)
+                {
+                    if (inputpassword2.Password.Length > 0)
+                    {
+                        string[] dataLogin = inputlogin.Text.Split('@'); // делим строку на две части
+                        if (dataLogin.Length == 2) // проверяем если у нас две части
+                        {
+                            string[] data2Login = dataLogin[1].Split('.'); // делим вторую часть ещё на две части
+                            if (data2Login.Length == 2)
+                            {
+                                if (inputpassword.Password == inputpassword2.Password) // проверка на совпадение паролей
+                                {
+                                    MessageBox.Show("Регистрация прошла успешно!");
+                                    this.Close();
+                                }
+                                else MessageBox.Show("Пароли не совподают");
+                            }
+                            else MessageBox.Show("Укажите логин в форме х@x.x", "Возникла ошибка!");
+                        }
+                        else MessageBox.Show("Укажите логин в форме х@x.x", "Возникла ошибка!");
+                    }
+                    else { MessageBox.Show("Ошибка: Проверьте поле ввода повторного пароля", "Возникла ошибка!"); }
+                }
+                else { MessageBox.Show("Ошибка: Проверьте поле ввода пароля", "Возникла ошибка!"); }
+            }
+            else { MessageBox.Show("Ошибка: Проверьте поле ввода логина", "Возникла ошибка!"); }
         }
     }
 }
