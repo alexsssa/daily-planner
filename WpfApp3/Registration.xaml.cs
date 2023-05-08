@@ -23,5 +23,10 @@ namespace WpfApp3
         {
             InitializeComponent();
         }
+
+        private void button_ok(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

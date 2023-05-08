@@ -9,25 +9,23 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="{x:Null}"
+        WindowStartupLocation="CenterScreen"
         >
 
-    <Grid>
-        <Border Background="#CCFBFBB7" CornerRadius="0,50,0,50" Margin="85,308,477,99"/>
-        <Label  Background="{x:Null}" FontSize="20" Content="Create new profile" Margin="131,317,523,227" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,1" BorderBrush="#7F000000"/>
-        <Label  Background="{x:Null}" FontSize="20" Content="Login:" Margin="99,348,642,187" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom"/>
-        <TextBox Background="{x:Null}" FontSize="20" Margin="158,0,503,193" FontFamily="./res/#Arizonia" x:Name="inputlogin" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" TextDecorations="Underline"/>
+    <Grid Margin="110,301,457,110">
+        <Border Background="#CCFBFBB7" CornerRadius="0,50,0,50" Margin="0,5,0,-5" />
+        <Label  Background="{x:Null}" FontSize="20" Content="Create new profile"  FontFamily="./res/#Arizonia" BorderThickness="0,0,0,1" BorderBrush="#7F000000" Margin="40,5,40,128"/>
+        <Label  Background="{x:Null}" FontSize="20" Content="Login:"  FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom" Height="41" Margin="7,0,163,82"/>
+        <TextBox Background="{x:Null}" FontSize="20" FontFamily="./res/#Arizonia" x:Name="inputlogin" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" TextDecorations="Underline" Margin="64,0,32,94"/>
 
-        <Label  Background="{x:Null}" FontSize="20" Content="Password:" Margin="99,0,621,158" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom"/>
-        <PasswordBox Background="{x:Null}" FontSize="20" Margin="179,0,503,163" FontFamily="./res/#Arizonia" x:Name="inputpassword" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" PasswordChar="*"/>
+        <Label  Background="{x:Null}" FontSize="20" Content="Password:" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom" Margin="10,0,139,60"/>
+        <PasswordBox Background="{x:Null}" FontSize="20" FontFamily="./res/#Arizonia" x:Name="inputpassword" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" PasswordChar="*" Margin="99,0,32,65"/>
 
-        <Label  Background="{x:Null}" FontSize="20" Content="Password:" Margin="99,0,621,128" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom"/>
-        <PasswordBox Background="{x:Null}" FontSize="20" Margin="179,0,503,133" FontFamily="./res/#Arizonia" x:Name="inputpassword2" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" PasswordChar="*"/>
+        <Label  Background="{x:Null}" FontSize="20" Content="Password:" FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom" Margin="7,0,142,30" Height="40"/>
+        <PasswordBox Background="{x:Null}" FontSize="20" FontFamily="./res/#Arizonia" x:Name="inputpassword2" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" PasswordChar="*" Margin="101,0,30,40"/>
 
-        <Border BorderBrush="#4C002B59" BorderThickness="1" CornerRadius="10, 10, 10, 10" HorizontalAlignment="Left" Margin="184,447,0,0" VerticalAlignment="Top" Width="44" Height="20">
-            <Button  Content="OK" Background="{x:Null}" BorderThickness="0" FontFamily="./res/#Arizonia"/>
+        <Border BorderBrush="#4C002B59" BorderThickness="1" CornerRadius="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="44" Height="20" Margin="0,138,0,0">
+            <Button  Content="OK" Background="{x:Null}" BorderThickness="0" FontFamily="./res/#Arizonia" Click="button_ok"/>
         </Border>
-
-
-
     </Grid>
 </Window>
