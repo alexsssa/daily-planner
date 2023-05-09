@@ -14,7 +14,7 @@
 
     <Grid Margin="110,301,457,110">
         <Border Background="#CCFBFBB7" CornerRadius="0,50,0,50" Margin="0,5,0,-5" />
-        <Label  Background="{x:Null}" FontSize="20" Content="Create new profile"  FontFamily="./res/#Arizonia" BorderThickness="0,0,0,1" BorderBrush="#7F000000" Margin="40,5,40,128"/>
+        <Label  Background="{x:Null}" FontSize="20" Content="Create new profile"  FontFamily="./res/#Arizonia" BorderThickness="0,0,0,1" BorderBrush="#7F000000" Margin="40,5,40,124"/>
         <Label  Background="{x:Null}" FontSize="20" Content="Login:"  FontFamily="./res/#Arizonia" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" VerticalAlignment="Bottom" Height="41" Margin="7,0,163,82"/>
         <TextBox Background="{x:Null}" FontSize="20" FontFamily="./res/#Arizonia" x:Name="inputlogin" BorderThickness="0,0,0,0" BorderBrush="#4C002B59" Foreground="#E5002B59" SelectionBrush="{x:Null}" VerticalAlignment="Bottom" TextDecorations="Underline" Margin="64,0,32,94"/>
 

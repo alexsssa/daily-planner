@@ -40,20 +40,20 @@ namespace WpfApp3
                             {
                                 if (inputpassword.Password == inputpassword2.Password) // проверка на совпадение паролей
                                 {
-                                    MessageBox.Show("Регистрация прошла успешно!");
+                                    
                                     this.Close();
                                 }
-                                else MessageBox.Show("Пароли не совподают");
+                                else new Error("Пароли не совподают").Show();
                             }
-                            else MessageBox.Show("Укажите логин в форме х@x.x", "Возникла ошибка!");
+                            else new Error("Укажите логин в форме х@x.x").Show();
                         }
-                        else MessageBox.Show("Укажите логин в форме х@x.x", "Возникла ошибка!");
+                        else new Error("Укажите логин в форме х@x.x").Show();
                     }
-                    else { MessageBox.Show("Ошибка: Проверьте поле ввода повторного пароля", "Возникла ошибка!"); }
+                    else new Error("Ошибка: Проверьте поле ввода повторного пароля").Show();
                 }
-                else { MessageBox.Show("Ошибка: Проверьте поле ввода пароля", "Возникла ошибка!"); }
+                else new Error("Ошибка: Проверьте поле ввода пароля").Show();
             }
-            else { MessageBox.Show("Ошибка: Проверьте поле ввода логина", "Возникла ошибка!"); }
+            else new Error("Ошибка: Проверьте поле ввода логина").Show();
         }
     }
 }

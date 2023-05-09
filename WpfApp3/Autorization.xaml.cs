@@ -33,9 +33,9 @@ namespace WpfApp3
                     //поиск в БД
                     new MenuWindow().Show();
                 }
-                else { MessageBox.Show("Ошибка: Проверьте поле ввода пароля", "Возникла ошибка!"); }
+                else { new Error("Ошибка: Проверьте поле ввода пароля").Show(); }
             }
-            else { MessageBox.Show("Ошибка: Проверьте поле ввода логина", "Возникла ошибка!"); }
+            else { new Error("Ошибка: Проверьте поле ввода логина").Show(); }
         }
 
         private void button_exit(object sender, RoutedEventArgs e)
