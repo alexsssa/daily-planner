@@ -40,7 +40,7 @@ namespace WpfApp3
                             {
                                 if (inputpassword.Password == inputpassword2.Password) // проверка на совпадение паролей
                                 {
-                                    
+                                    new SuccessWindow("Новый аккаунт успешно создан!");
                                     this.Close();
                                 }
                                 else new Error("Пароли не совподают").Show();

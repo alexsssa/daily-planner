@@ -31,7 +31,7 @@ namespace WpfApp3
                 if (inputpassword.Password.Length > 0)
                 {
                     //поиск в БД
-                    new MenuWindow().Show();
+                    new SuccessWindow("Вход выполнен!").Show();
                 }
                 else { new Error("Ошибка: Проверьте поле ввода пароля").Show(); }
             }
