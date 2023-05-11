@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBase.cs" />
     <Compile Include="Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
