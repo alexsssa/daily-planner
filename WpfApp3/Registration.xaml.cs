@@ -55,5 +55,10 @@ namespace WpfApp3
             }
             else new Error("Ошибка: Проверьте поле ввода логина").Show();
         }
+
+        private void button_exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
