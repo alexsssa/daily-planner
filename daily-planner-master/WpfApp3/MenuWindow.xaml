@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp3.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="600" Width="800">
+    <Grid>
+
+        <Label Background="LightBlue" x:Name="label" Margin="0,0,0,509" Grid.ColumnSpan="3"/>
+        <Button Background="LightBlue" Margin="10,5,669,514" FontSize="24" Click="Button_Exit" Grid.ColumnSpan="3">Выход</Button>
+        <Calendar  HorizontalAlignment="Left" Margin="37,157,0,71" Width="451"/>
+    </Grid>
+</Window>
