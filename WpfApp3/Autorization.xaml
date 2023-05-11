@@ -17,8 +17,8 @@
 
         <!-- ФОРМА ВХОДА -->
         <Image Source="res/bg.png" HorizontalAlignment="Center" Width="800" Height="575" VerticalAlignment="Center"></Image>
-        <TextBox x:Name="inputlogin" Margin="440,159,100,379" Foreground="Gray" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="26" BorderThickness="0,0,0,1"/>
-        <PasswordBox x:Name="inputpassword" Margin="440,219,100,324" Foreground="Gray" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="20" PasswordChar="*" BorderThickness="0,0,0,1" ClipToBounds="True"/>
+        <TextBox x:Name="inputlogin" Margin="440,159,100,379" Foreground="DarkGray" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="26" BorderThickness="0,0,0,1"/>
+        <PasswordBox x:Name="inputpassword" Margin="440,219,100,324" Foreground="DarkGray" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontFamily="./res/#Arizonia" FontSize="20" PasswordChar="*" BorderThickness="0,0,0,1" ClipToBounds="True"/>
         <Button Content="Done" HorizontalAlignment="Left" Margin="530,295,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="{x:Null}" BorderBrush="Black" FontFamily="./res/#Arizonia" FontSize="26" BorderThickness="0,0,0,1" Click="button_done"/>
         <Button Content="Registration" HorizontalAlignment="Left" Margin="431,251,0,0" VerticalAlignment="Top" Height="25" Width="80" Background="{x:Null}" BorderBrush="Black" FontFamily="./res/#Arizonia" FontSize="16" BorderThickness="0,0,0,1" Click="button_register"/>
     </Grid>

@@ -27,9 +27,5 @@
         <Border BorderBrush="#4C002B59" BorderThickness="1" CornerRadius="10, 10, 10, 10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="44" Height="20" Margin="0,138,0,0">
             <Button  Content="OK" Background="{x:Null}" BorderThickness="0" FontFamily="./res/#Arizonia" Click="button_ok"/>
         </Border>
-
-        <Button Height="15" Width="15" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="button_exit" Margin="10,15,208,134">
-            <Image x:Name="exit" Source="/res/img_close.png"/>
-        </Button>
     </Grid>
 </Window>
