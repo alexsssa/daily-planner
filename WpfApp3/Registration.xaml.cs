@@ -119,5 +119,10 @@ namespace WpfApp3
             else
                 return false;
         }
+
+        private void button_exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
