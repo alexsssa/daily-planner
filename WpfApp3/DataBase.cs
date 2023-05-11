@@ -10,7 +10,7 @@ namespace WpfApp3
     internal class DataBase
     {
         // Создания подключения с БД
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=WIN-4IVK4DVETE7; Initial Catalog=Users_db; Integrated Security=True;");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=WIN-JO22SGESGIG; Initial Catalog=users_db; Integrated Security=True;");
         
         // Открытие подключение с БД
         public void OpenConnection()

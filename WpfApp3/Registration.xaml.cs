@@ -48,37 +48,24 @@ namespace WpfApp3
             dataBase.OpenConnection();
 
 
-            if (inputlogin.Text.Length > 0)
-            {
-                if (inputpassword.Password.Length > 0)
-                {
-                    if (inputpassword2.Password.Length > 0)
-                    {
-                        string[] dataLogin = inputlogin.Text.Split('@'); // делим строку на две части
-                        if (dataLogin.Length == 2) // проверяем если у нас две части
-                        {
-                            string[] data2Login = dataLogin[1].Split('.'); // делим вторую часть ещё на две части
-                            if (data2Login.Length == 2)
-                            {
-                                if (inputpassword.Password == inputpassword2.Password) // проверка на совпадение паролей
-                                {
-                                    if (command.ExecuteNonQuery() == 1)
-                                    {
-                                        new SuccessWindow("Новый аккаунт успешно создан!");
-                                        this.Close();
-                                    }
-                                }
-                                else new Error("Пароли не совподают").Show();
-                            }
-                            else new Error("Укажите логин в форме х@x.x").Show();
-                        }
-                        else new Error("Укажите логин в форме х@x.x").Show();
-                    }
-                    else new Error("Ошибка: Проверьте поле ввода повторного пароля").Show();
-                }
-                else new Error("Ошибка: Проверьте поле ввода пароля").Show();
-            }
-            else new Error("Ошибка: Проверьте поле ввода логина").Show();
+            bool[] checks = new bool[] { false, false, false, false, false };
+            string[] errors = new string[] { "Ошибка: Проверьте поле ввода логина", "Ошибка: Проверьте поле ввода пароля", "Ошибка: Проверьте поле ввода повторного пароля", "Укажите логин в форме х@x.x", "Укажите логин в форме х@x.x", "Пароли не совподают" };
+            if (inputpassword.Password.Length > 0) { checks[0] = true; }                         // логин введен
+
+            if (inputpassword2.Password.Length > 0) { checks[1] = true; }                       // пароль введен
+
+            if (inputlogin.Text.Split('@').Length == 2) { checks[2] = true; }                  // в логине есть @
+
+            if (inputlogin.Text.Split('@')[1].Split('.').Length == 2) { checks[3] = true; }          // в логине есть точка
+
+            if (inputpassword.Password == inputpassword2.Password) { checks[4] = true; }     // пароли совпадают
+
+            if (checks.Contains(false)) { new Error(errors[Array.IndexOf(checks, false)]).Show(); }
+            else { new SuccessWindow("Новый аккаунт успешно создан!"); this.Close(); }
+
+            //checks.Contains(false) ? new Error(errors[checks.IndexOf(false)]).Show() : new SuccessWindow("Новый аккаунт успешно создан!"); this.Close();
+
+
             if (checkUser())
 
             {
@@ -113,7 +100,7 @@ namespace WpfApp3
 
             if (table.Rows.Count > 0) // проверка данны строки БД с полученными данными
             {
-                new SuccessWindow("Логин уже занят!").Show();
+                new Error("Логин уже занят!").Show();
                 return true;
             }
             else
