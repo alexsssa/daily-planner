@@ -53,17 +53,17 @@ namespace WpfApp3
             init();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void button_addtask(object sender, RoutedEventArgs e)
         {
             // Добавление новой записи
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void button_deltask(object sender, RoutedEventArgs e)
         {
             // Удаление записи
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void button_donetask(object sender, RoutedEventArgs e)
         {
             // Переключение чекбокса записи
         }
