@@ -29,7 +29,7 @@
         </Border>
 
         <Button Height="15" Width="15" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="button_exit" Margin="10,15,208,134">
-            <Image x:Name="exit" Source="/res/off.png"/>
+            <Image x:Name="exit" Source="/res/img_close.png"/>
         </Button>
     </Grid>
 </Window>

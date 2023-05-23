@@ -57,7 +57,12 @@ namespace WpfApp3
             {
                 if (inputpassword.Password.Length > 0)
                 {
-                    if (table.Rows.Count == 1) new SuccessWindow("Вход выполнен!").Show(); // проверка данны строки БД с полученными данными
+                    if (table.Rows.Count == 1)
+                    {
+                        new SuccessWindow("Вход выполнен!").Show();
+                        new Main().Activate();
+                        this.Close();
+                    }
                 }
                 else { new Error("Ошибка: Проверьте поле ввода пароля").Show(); }
             }
